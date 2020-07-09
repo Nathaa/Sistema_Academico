@@ -16,13 +16,16 @@ class CreateAlumnasTable extends Migration
         Schema::create('alumnas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 120);
+            $table->string('apellido', 120);
             $table->date('fecha_nacimiento');
             $table->integer('edad');
             $table->string('direccion', 254);
-            $table->string('Encargado', 100);
+            $table->string('encargado', 100);
+            $table->string('parentesco');
             $table->integer('telefono_emergencia');
             $table->string('padecimientos', 254);
-            $table->string('enfermedades', 254);
+            $table->string('descripcion_padecimiento', 100);
+            $table->string('alergia_medicamento', 50);
             $table->string('nombre_padre', 100);
             $table->string('profesion_padre', 60);
             $table->integer('telefono_padre');
